@@ -1,0 +1,25 @@
+.input-group {
+  display: flex;
+  flex-direction: column; /* Apila el label arriba del input */
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-label {
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #6366f1; /* Color azulado al hacer clic */
+}

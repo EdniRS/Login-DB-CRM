@@ -1,0 +1,44 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh; 
+  background-color: #0f172a; 
+  color: #ffffff;
+  overflow: hidden; /* Evita que toda la página haga scroll, lo controlaremos por dentro */
+}
+
+/* Nuevo contenedor que envuelve la barra superior y el contenido principal */
+.dashboard-content-wrapper {
+  flex: 1; /* Toma todo el espacio a la derecha de la barra lateral */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* ¡Clave! Permite hacer scroll hacia abajo si el contenido es muy largo */
+}
+
+.dashboard-main {
+  padding: 30px 40px; /* Espaciado interno: 30px arriba/abajo, 40px a los lados */
+  width: 100%;
+  /* Eliminamos el align-items: center y justify-content: center que rompían el diseño */
+}
+
+/* Estilos para la vista cuando no estamos en "Resumen" */
+.development-view {
+  text-align: center;
+  margin-top: 100px; /* Lo bajamos un poco manualmente ya que quitamos el centrado */
+  animation: fadeIn 0.3s ease; 
+}
+
+.development-title {
+  font-size: 4rem;
+  color: #6366f1; 
+  margin-bottom: 10px;
+}
+
+.development-subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

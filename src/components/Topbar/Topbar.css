@@ -1,0 +1,77 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 30px;
+  border-bottom: 1px solid #1e293b;
+  background-color: #0f172a;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: #64748b;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: white;
+  margin-left: 10px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+  border-left: 1px solid #1e293b;
+  border-right: 1px solid #1e293b;
+}
+
+.user-avatar {
+  background-color: #6366f1;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.user-role {
+  color: #64748b;
+  font-size: 0.75rem;
+}
