@@ -1,38 +1,36 @@
 import React from 'react';
-import { BellDot, LogOut, Search } from 'lucide-react';
+import { Bell, LogOut, Search } from 'lucide-react';
 import './Topbar.css';
-
-
 
 const Topbar = ({ onLogout }) => {
   return (
-    <header className="topbar">
+    <header className='topbar'>
+
       {/* Buscador */}
-      <div className="search-container">
-        <span className="search-icon"><Search size={22} color='#ffffff'/></span> 
-        <input 
-          type="text" 
-          placeholder="Buscar en tu CRM..." 
-          className="search-input"
+      <div className="topbar-buscador">
+        <Search size={16} />
+        <input
+          type="text" name="search" id="search"
+          placeholder="Buscar en tu CRM..."
         />
       </div>
 
-      {/* Perfil y Acciones */}
-      <div className="topbar-actions">
-        <button className="icon-button">
-          <BellDot size={22} color='#ffffff'/>
+      {/*Acciones */}
+      <div className='topbar-acciones'>
+        <button className='topbar-acciones-boton'>
+          <Bell size={16} />
+          <span className='notificaciones-alerta'></span>
         </button>
-        
-        <div className="user-profile">
-          <div className="user-avatar">MR</div>
-          <div className="user-info">
-            <span className="user-name">Melvin Rizo</span>
-            <span className="user-role">Admin</span>
-          </div>
+
+        <span className='topbar-avatar'>MR</span>
+        <div className='topbar-user'>
+          <strong>Melvin Rizo</strong>
+          <small>Admin</small>
         </div>
 
-        <button className="icon-button logout" onClick={onLogout} title='Cerrar Sesión'>
-           <LogOut size={22} color='#ffffff'/>
+
+        <button className='topbar-acciones-boton' onClick={onLogout} title='Cerrar Sesión'>
+          <LogOut size={16} />
         </button>
       </div>
     </header>

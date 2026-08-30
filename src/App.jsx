@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Login from './pages/Login/Login';
+import Login from './Pages/Login/Login';
 import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {

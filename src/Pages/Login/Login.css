@@ -22,16 +22,17 @@
   border: 1px solid rgba(255, 255, 255, 0.08); 
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   
-  border-radius: 16px;
+  border-radius: 25px;
   width: 100%;
   max-width: 400px;
-  padding: 2.5rem;
+ padding: 2.6rem;
 }
 
 
 .login-form {
   display: flex;
   flex-direction: column;
+ 
 }
 
 .login-button {
@@ -56,4 +57,21 @@
   color: #aeb0b4; /* Un gris un poco más claro para que contraste mejor */
   font-size: 0.75rem;
   margin-top: 25px;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 400px;
+
+}
+
+.login-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }

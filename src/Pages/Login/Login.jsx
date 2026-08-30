@@ -10,9 +10,9 @@ const Login = ({ onLogin }) => {
   const [error, setError] = useState('');
 
   const handleLogin = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     if (email === 'admin@nexocrm.com' && password === 'admin123') {
-      onLogin(); 
+      onLogin();
     } else {
       setError('Correo o contraseña incorrectos');
     }
@@ -20,39 +20,46 @@ const Login = ({ onLogin }) => {
 
   return (
     <div className="login-page">
-      <div className="login-card">
-        <Logo />
-        <LoginHeader />
+      <div className="login-wrapper">
         
-        <form className="login-form" onSubmit={handleLogin}>
-          
+        
+        <div className="login-header-section">
+          <Logo />
+          <LoginHeader />
+        </div>
+        
+        
+        <div className="login-card">
+          <form className="login-form" onSubmit={handleLogin}>
+
           {/* Usamos tu componente Input, que ya trae todo el diseño bonito */}
-          <Input 
-            label="Correo electrónico" 
-            type="email" 
-            id="email" 
+          <Input
+            label="Correo electrónico"
+            type="email"
+            id="email"
             placeholder="tu@ejemplo.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <Input 
-            label="Contraseña" 
-            type="password" 
-            id="password" 
+          <Input
+            label="Contraseña"
+            type="password"
+            id="password"
             placeholder="......"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          {error && <p style={{color: '#ef4444', fontSize: '0.85rem', marginBottom: '10px'}}>{error}</p>}
-          
+          {error && <p style={{ color: '#ef4444', fontSize: '0.85rem', marginBottom: '10px' }}>{error}</p>}
+
           <button type="submit" className="login-button">
             Iniciar sesión
           </button>
         </form>
 
       </div>
+    </div>
     </div>
   );
 };
