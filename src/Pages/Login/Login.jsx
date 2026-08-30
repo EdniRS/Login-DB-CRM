@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Logo from '../../components/Logo/Logo';
 import LoginHeader from '../../components/LoginHeader/LoginHeader';
 import Input from '../../components/Input/Input'; 
-import './Login.css';
+import './Login.css'; 
 
 const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');

@@ -37,7 +37,7 @@ const Resumen = () => {
                     </div>
                     <p>Oportunidades</p>
                     <h2>$65.4k</h2>
-                    <span className="trend positive">↑ 8.2% vs. mes anterior</span>
+                    <span className="trend positive">↑ 8.2%</span>
                     <span className="trend-text">vs. mes anterior</span>
                 </div>
 
@@ -47,7 +47,7 @@ const Resumen = () => {
                     </div>
                     <p>Tasa de conversión</p>
                     <h2>24.8%</h2>
-                    <span className="trend positive">↑ 4.1% vs. mes anterior</span>
+                    <span className="trend positive">↑ 4.1%</span>
                     <span className="trend-text">vs. mes anterior</span>
                 </div>
 
@@ -57,7 +57,7 @@ const Resumen = () => {
                     </div>
                     <p>Tareas pendientes</p>
                     <h2>18</h2>
-                    <span className="trend negative">↑ 2.4% vs. mes anterior</span>
+                    <span className="trend negative">↑ 2.4%</span>
                     <span className="trend-text">vs. mes anterior</span>
                 </div>
 
