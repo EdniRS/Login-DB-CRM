@@ -1,24 +1,39 @@
 /* --- FONDO CON EFECTO DIFUMINADO --- */
 .login-page {
-  /* Degradado radial en lugar de un color sólido */
   background: radial-gradient(circle at center top, #162540 0%, #010721 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px; /* Margen de seguridad para pantallas pequeñas */
+  padding: 20px; 
 }
 
-/* --- CONTENEDOR CON EFECTO CRISTAL (Glassmorphism) --- */
+.login-wrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+width: 100%;
+max-width: 400px;
+
+}
+
+.login-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .login-card {
-  /* 1. Transparencia: Blanco al 4% de opacidad */
+ 
   background: rgba(255, 255, 255, 0.04); 
   
-  /* 2. El difuminado interno (blur) que crea el efecto de vidrio */
-  backdrop-filter: blur(12px); 
-  -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
   
-  /* 3. Borde sutil y sombra para separar la tarjeta del fondo */
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); 
+  
+  
   border: 1px solid rgba(255, 255, 255, 0.08); 
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   
@@ -29,49 +44,28 @@
 }
 
 
-.login-form {
-  display: flex;
-  flex-direction: column;
- 
-}
-
 .login-button {
-  background-color: #3b3ede;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 15px;
-  transition: background-color 0.3s ease; /* Transición suave al hacer hover */
-}
-
-.login-button:hover {
-  background-color: #4f46e5;
-}
-
-.login-footer {
-  display: block;
-  text-align: center;
-  color: #aeb0b4; /* Un gris un poco más claro para que contraste mejor */
-  font-size: 0.75rem;
-  margin-top: 25px;
-}
-
-.login-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
   width: 100%;
-  max-width: 400px;
-
+  padding: 12px;
+  background-color: var(--primary);
+  color: var(--text-main);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
 }
 
-.login-header-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.login-button-hover {
+  background-color: var(--primary-hover);
 }
+
+.login-error {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+
+

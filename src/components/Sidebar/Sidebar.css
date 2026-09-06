@@ -1,51 +1,58 @@
-.sidebar {
-  width: 260px;
-  background-color: #101b36; /* Un azul ligeramente más oscuro que el fondo principal */
+.sidebar{
+  width: 250px;
+  flex: none;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  border-right: 1px solid #1e293b;
+  gap: 30px;
+
+  padding: 26px 17px;
+
+  background: var(--bg-card);
+  border-right: 1px solid var(--border);
+  justify-content: space-between;
+
 }
 
-.sidebar-header {
-  margin-bottom: 30px;
+.sidebar-header{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  margin: 0px 8px 24px 8px;
 }
 
-.sidebar-nav {
+.sideba-header strong{
+  font-size: 18px;
+  color: var(--text);
+
+}
+
+.icon{
+  background-color: var(--primary);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+  color: var(--text-light);
+}
+
+.menu-title{
+  padding: 0 8px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+
+  color: var(--text-muted);
+}
+
+.nav-menu{
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-
-.nav-subtitle {
-  color: #64748b;
-  font-size: 0.75rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-  padding-left: 15px;
-}
-
-.nav-button {
-  background: transparent;
-  color: #94a3b8;
-  border: none;
-  padding: 12px 15px;
-  border-radius: 8px;
-  text-align: left;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.nav-button:hover {
-  background-color: #1e293b;
-  color: #ffffff;
-}
-
-/* El estilo para el botón que está seleccionado (Azul) */
-.nav-button.active {
-  background-color: #6366f1;
-  color: #ffffff;
+  gap: 10px;
 }

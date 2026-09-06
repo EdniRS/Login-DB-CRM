@@ -1,49 +1,56 @@
 import React from 'react';
-import Logo from '../Logo/Logo';
 import {
   LayoutDashboard,
-  Users,
-  Target,
-  ClipboardCheck,
-  CalendarDays,
-  Settings,
+  LogOut,
+  GamepadDirectional,
+  UsersRound,
 }
-  from 'lucide-react';
+from 'lucide-react';
 import './Sidebar.css';
+import { useNavigate } from 'react-router-dom';
+import ItemMenu from '../../components/ItemMenu/ItemMenu';
 
-const menuItems = [
-  { name: "Resumen", Icon: LayoutDashboard },
-  { name: "Contactos", Icon: Users },
-  { name: "Oportunidades", Icon: Target },
-  { name: "Actividades", Icon: ClipboardCheck },
-  { name: "Calendario", Icon: CalendarDays },
-  { name: "Configuración", Icon: Settings }
-];
 
-const Sidebar = ({ activeTab, setActiveTab }) => {
+export default function Sidebar() {
+  const navigate = useNavigate();
+
+  const navItems = [
+    {
+      label: 'Dashboard',
+      path: '/dashboard',
+      icon: <LayoutDashboard size={16} strokeWidth={3}/>
+    },
+
+    {
+      label: 'Clientes',
+      path: '/clientes',
+      icon: <UsersRound size={16} strokeWidth={3} />,
+    },
+  ];
+
+  const logout = () => {
+    navigate('/');
+  }
+
+
   return (
-    <aside className="sidebar">
-      <div className="sidebar-header">
-        <Logo />
+    <aside className='sidebar'>
+      <div>
+        <div className='sidebar-header'>
+          <span className='icon'> <GamepadDirectional size={20} /></span>
+          <strong>Nexo CRM</strong>
+        </div>
+
+        <span className='menu-title'>WORKSPACE</span>
+        <nav className='nav-menu'>
+          {navItems.map((item) => (
+            <ItemMenu item={item} /> 
+          ))}
+        </nav>
       </div>
 
-      <nav className="sidebar-nav">
-        <span className="nav-subtitle">WORKSPACE</span>
 
-        {menuItems.map((item) => (
-          <button
-            key={item.name}
-            className={`nav-button ${activeTab === item.name ? 'active' : ''}`}
-            onClick={() => setActiveTab(item.name)}
-          >
-            <item.Icon size={18} style={{ marginRight: '12px' }} />
-
-            {item.name}
-          </button>
-        ))}
-      </nav>
+      <button className='logout' onClick={logout}> <LogOut size={19 }/> Cerrar Sesión</button>
     </aside>
-  );
-};
-
-export default Sidebar;
+  )
+}

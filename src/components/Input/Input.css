@@ -5,21 +5,18 @@
   text-align: left;
 }
 
-.input-label {
-  color: #e5e7eb;
+.input-label{
   font-size: 0.85rem;
-  margin-bottom: 5px;
+  color: var(--text-muted)
+
 }
 
-.input-field {
-  background-color: #1f2937;
-  border: 1px solid #374151;
-  color: #ffffff;
-  padding: 10px 12px;
-  border-radius: 6px;
-  outline: none;
-}
+.input-style{
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--bh-main);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  outline: none
 
-.input-field:focus {
-  border-color: #6366f1; /* Color azulado al hacer clic */
 }

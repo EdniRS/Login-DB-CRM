@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
-import Login from './Pages/Login/Login';
+
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './Pages/Login/Login'
+import MainLayout from './layouts/MainLayout'
 import Dashboard from './Pages/Dashboard/Dashboard';
+import Clientes from './Pages/Clientes/Clientes'
+
 
 function App() {
-  // Estado para controlar si estamos en el Login o en el Dashboard
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
   return (
-    <div>
-      {/* Si está autenticado, muestra el Dashboard. Si no, muestra el Login */}
-      {isAuthenticated ? (
-        <Dashboard onLogout={() => setIsAuthenticated(false)} />
-      ) : (
-        <Login onLogin={() => setIsAuthenticated(true)} />
-        
-      )}
-    </div>
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={<Login />} />
+
+        <Route element={<MainLayout />} >
+          <Route path='/dashboard' element={<Dashboard />} /> 
+          <Route path='/clientes' element={<Clientes />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

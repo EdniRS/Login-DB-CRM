@@ -1,67 +1,61 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Logo from '../../components/Logo/Logo';
 import LoginHeader from '../../components/LoginHeader/LoginHeader';
-import Input from '../../components/Input/Input'; 
+import Input from '../../components/Input/Input'
 import './Login.css'; 
 
-const Login = ({ onLogin }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
 
-  const handleLogin = (e) => {
+
+function Login() {
+  const navigate = useNavigate();
+
+  function irDashboard(e) {
     e.preventDefault();
-    if (email === 'admin@nexocrm.com' && password === 'admin123') {
-      onLogin();
-    } else {
-      setError('Correo o contraseña incorrectos');
-    }
-  };
+    navigate('/dashboard');
+  }
 
   return (
-    <div className="login-page">
-      <div className="login-wrapper">
-        
-        
-        <div className="login-header-section">
+    <div className='login-page'>
+      <div className='login-wrapper'>
+
+        {/* Corregido: la letra 'n' al final de section */}
+        <div className='login-header-section'>
           <Logo />
           <LoginHeader />
         </div>
-        
-        
-        <div className="login-card">
-          <form className="login-form" onSubmit={handleLogin}>
 
-          
-          <Input
-            label="Correo electrónico"
-            type="email"
-            id="email"
-            placeholder="tu@ejemplo.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+        <div className='login-card'>
+          {/* Al presionar Enter o el botón, se ejecuta handleLogin */}
+          <form className='login-form' onSubmit={irDashboard}>
+            
+            {/* Usamos el componente <Input /> con mayúscula */}
+            <Input
+              label="Correo electrónico"
+              type="email"
+              placeholder="tu@ejemplo.com" requiered 
+              
+              
+            />
 
-          <Input
-            label="Contraseña"
-            type="password"
-            id="password"
-            placeholder="......"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+            <Input
+              label="Contraseña"
+              type="password"
+              placeholder="••••••••" required
+            />
 
-          {error && <p style={{ color: '#ef4444', fontSize: '0.85rem', marginBottom: '10px' }}>{error}</p>}
+            
 
-          <button type="submit" className="login-button">
-            Iniciar sesión
-          </button>
-        </form>
+            <button type="submit" className="login-button">
+              Iniciar sesión
+            </button>
+
+          </form>
+        </div>
 
       </div>
     </div>
-    </div>
   );
-};
+}
 
 export default Login;

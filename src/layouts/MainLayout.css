@@ -1,0 +1,15 @@
+.app-container{
+    display: flex;
+
+    min-height: 100vh;
+    background: var(--bg-main);
+
+}
+
+.area-principal{
+    width: 100%;
+}
+
+.main-content{
+    padding: 30px;
+}

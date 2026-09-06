@@ -1,11 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+DE+LA+Guides&display=swap');
+
+
+
+/* ============================================================
+   VARIABLES GLOBALES
+   ============================================================ */
+
+
+:root {
+    font-family: 'Lato', sans-serif;
+
+    color: #edf2ff;
+    background: #0c1428;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+
+    --bg-main: #0c1428;
+    --bg-card: #101b36;
+    --bg-secondary: #152240;
+    --bg-hover: #1b294b;
+
+    --border: #283453;
+    --border-light: #354363;
+
+    --text: #edf2ff;
+    --text-secondary: #aab5d0;
+    --text-muted: #8d99b4;
+
+    --primary: #617CFF;
+    --primary-hover: #7590ff;
+
+    --success: #61dda7;
+    --danger: #ff6b81;
+
+    --focus: #8199ff;
+}
+
+
+
+/* ============================================================
+   RESET
+   ============================================================ */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    min-height: 100%;
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: #314061; /* El fondo azul oscuro de tu diseño */
-  color: #ffffff;
+    margin: 0;
+    min-width: 320px;
+    background: var(--bg-main);
+    color: var(--text);
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline-offset: 2px;
+}
+
+
+/* ============================================================
+   UTILIDADES GLOBALES
+   ============================================================ */
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.blue {
+    color: #7d98ff;
+}
+
+
+.compact {
+    padding: 10px 14px;
+    white-space: nowrap;
 }

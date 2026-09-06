@@ -1,39 +1,17 @@
-import React, { useState } from 'react';
-import Sidebar from '../../components/Sidebar/Sidebar';
-import Topbar from '../../components/Topbar/Topbar';
-import Resumen from './Resumen';
-
 import './Dashboard.css';
+import PageHeader from '../../components/comp-UI/PageHeader'
+import { CurrentUser } from '../../data/UserData'
 
-const Dashboard = ({ onLogout }) => {
-  const [activeTab, setActiveTab] = useState('Resumen'); 
-
+export default function Dashboard() {
   return (
-    <div className="dashboard-container">
-      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      
-      {/* Contenedor derecho (Topbar + Contenido) */}
-      <div className="dashboard-content-wrapper">
-        <Topbar onLogout={onLogout} />
-
-        <main className="dashboard-main">
-
-          {activeTab === 'Resumen' ? (
-            <Resumen />
-
-          ) : (  
-
-            <div className='development-view'>
-              <h1 className='development-title'>{activeTab}</h1>
-            </div>
-
-          )}
-
-
-        </main>  
-      </div>
-    </div>
-  );
-};
-
-export default Dashboard;
+    <>
+    <PageHeader
+      title={`Bienvenido, ${CurrentUser.nombre.split(' ')[0]}`}   
+      subtitle="Aquí tienes el pulso de tu negocio y relaciones comerciales hoy." 
+      actionText='Ver Contactos'
+    />
+    <h2>Hola desde dashboard</h2>
+    </>
+    
+  )
+}

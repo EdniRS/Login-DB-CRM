@@ -1,0 +1,25 @@
+.topbar-buscador{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  background: var(--bg-main);
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.topbar-buscador:focus-within{
+  border-color: var(--primary);
+
+}
+
+.topbar-buscador input{
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 14px;
+}

@@ -1,19 +1,15 @@
 import React from 'react';
-import { Bell, LogOut, Search } from 'lucide-react';
+import { Bell, LogOut } from 'lucide-react';
 import './Topbar.css';
+import { CurrentUser } from '../../data/UserData'
+import Buscador from '../comp-UI/Buscador'
 
-const Topbar = ({ onLogout }) => {
+function Topbar({ onLogout })  {
   return (
     <header className='topbar'>
 
       {/* Buscador */}
-      <div className="topbar-buscador">
-        <Search size={16} />
-        <input
-          type="text" name="search" id="search"
-          placeholder="Buscar en tu CRM..."
-        />
-      </div>
+      <Buscador placeholder="Buscar en el CRM..." />
 
       {/*Acciones */}
       <div className='topbar-acciones'>
@@ -22,10 +18,10 @@ const Topbar = ({ onLogout }) => {
           <span className='notificaciones-alerta'></span>
         </button>
 
-        <span className='topbar-avatar'>MR</span>
+        <span className='topbar-avatar'>{CurrentUser.abreviatura}</span>
         <div className='topbar-user'>
-          <strong>Melvin Rizo</strong>
-          <small>Admin</small>
+          <strong>{CurrentUser.nombre}</strong>
+          <small>{CurrentUser.rol}</small>
         </div>
 
 

@@ -1,0 +1,35 @@
+.nav-item, .logout{
+
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    background-color: transparent;
+
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+.nav-item:hover, .logout:hover{
+    background: var(--bg-hover);
+    color: var(--text);
+}
+
+
+.nav-item.active{
+    background: var(--primary);
+    color: var(--text);
+    font-weight: 900;
+}
+
+.logout{
+    border: 1px solid var(--border);
+    justify-content: center;
+}

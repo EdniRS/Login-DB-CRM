@@ -4,39 +4,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 36px;
-  border-bottom: 1px solid #283453;
+  border-bottom: 1px solid var(--border);
   position: stikcy;
   top: 0;
   z-index: 10;
   width: 100%;
-  background-color: #101b36;
-}
-
-.topbar-buscador{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 300px;
-  background-color: #0c1428;
-  padding: 8px 16px;
-  border-radius: 10px;
-  border: 1px solid color #283453;
-  color: #8d99b4;
-
-}
-
-.topbar-buscador:focus-within{
-  border-color: #617cff;
-
-}
-
-.topbar-buscador input{
-  width: 100%;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  color: #edf2ff;
-  font-size: 14px;
+  background-color: var(--bg-card);
 }
 
 .topbar-acciones{
